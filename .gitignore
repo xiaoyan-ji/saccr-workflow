@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+.venv/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Secrets (do not commit credentials)
+.env
+*.pem
+
+# Large or regenerated outputs (remove the # below if you want to track outputs/)
+outputs/*.pdf
