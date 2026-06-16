@@ -1,0 +1,16 @@
+# SA-CCR counterparty credit risk exposure workflow (Python)
+# Install: pip install -r requirements.txt
+
+# Core data & computation
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Excel input (.xlsx)
+openpyxl>=3.1.0
+
+# Reporting charts
+matplotlib>=3.7.0
+
+# Jupyter notebook support
+jupyter>=1.0.0
+ipykernel>=6.25.0
