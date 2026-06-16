@@ -8,7 +8,7 @@ Python pipeline from OTC-style trade data in Excel to **Add-on**, **PFE**, **rep
 .
 ├── data/                      # Input workbooks (see data/README.md)
 ├── notebook/                  # Jupyter walkthrough (exploratory + charts)
-├── outputs/                   # Generated artifacts (CSV, XLSX, HTML, PNG) — not tracked by Git by default
+├── outputs/                   # Placeholder for generated artifacts (see outputs/README.md; large files gitignored)
 ├── scripts/                   # CLI entry points (batch run + exports)
 │   └── run_saccr.py
 ├── src/
@@ -22,6 +22,9 @@ Python pipeline from OTC-style trade data in Excel to **Add-on**, **PFE**, **rep
 │       ├── reporting.py       # summary.xlsx + report.html writers
 │       └── transform.py
 ├── tests/                     # pytest regression checks
+├── .github/
+│   └── workflows/
+│       └── ci.yml             # GitHub Actions: pytest on push/PR to main
 ├── LICENSE                    # MIT
 ├── pyproject.toml             # Package metadata + optional [dev] extras
 ├── requirements.txt
@@ -89,6 +92,8 @@ pytest
 ```
 
 `pyproject.toml` sets `pythonpath = ["src"]` for pytest, so `import saccr` works without manual `PYTHONPATH`.
+
+On GitHub, **Actions** runs the same test suite on every push to `main` (see `.github/workflows/ci.yml`).
 
 ## Data
 
