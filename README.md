@@ -2,6 +2,16 @@
 
 Python pipeline from OTC-style trade data in Excel to **Add-on**, **PFE**, **replacement cost (RC)**, **EAD**, and **RWA** at netting-set and counterparty level, following **BCBS SA-CCR** asset-class conventions and grouping logic.
 
+## Cross-role relevance
+
+This project is a **counterparty credit / regulatory exposure** pipeline (SA-CCR-style)—**not** a fraud model, AML engine, or payment-default scorecard. If you are recruiting for **Fraud Analytics**, **Payment Risk**, or **Transaction Risk**, the transferable pieces are:
+
+- **Transaction-level data engineering**: ingest row-level inputs, enforce a **column schema**, and emit reproducible artifacts (CSV / XLSX / HTML).
+- **Layered aggregation & monitoring-style reporting**: roll metrics through **entity → portfolio bucket → category** hierarchies (here: counterparty → netting set → asset class)—similar in shape to **merchant / channel / product** rollups used in payment and transaction monitoring.
+- **Operational hardening**: CLI batch runs, versioned dependencies, **pytest** + **CI** for regression checks—patterns typical of **production risk and control** workflows.
+
+Point recruiters to this repo for **CCR / capital markets / portfolio credit** depth; use your resume or cover letter to map the above to specific fraud, payment, or transaction-monitoring contexts you have worked on.
+
 ## Project structure
 
 ```text
