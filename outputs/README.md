@@ -1,8 +1,10 @@
 # Outputs directory
 
-This folder holds **generated** results from the pipeline (CSV, XLSX, HTML, PNG, PDF exports).
+Sample **pipeline results** in this folder (`*.csv`, `summary.xlsx`, `report.html`, `rwa_by_counterparty.png`) are **committed** so visitors can open them without running code.
 
-## How to produce files here
+**PDF exports** (e.g. notebook print-to-PDF) stay **out of Git** via `.gitignore` (`outputs/*.pdf`)—usually large and easy to regenerate.
+
+## How to refresh these files
 
 From the repository root:
 
@@ -10,4 +12,4 @@ From the repository root:
 python scripts/run_saccr.py --output-dir outputs --plot
 ```
 
-Regenerated artifacts are listed in `.gitignore` so they are **not committed** (keeps the repo small and avoids noisy diffs). This `README.md` is committed so the `outputs/` directory is visible on GitHub.
+After regenerating, commit updated CSV/HTML/PNG/XLSX if you want the repo to reflect a new run (omit PDFs).

@@ -8,7 +8,7 @@ Python pipeline from OTC-style trade data in Excel to **Add-on**, **PFE**, **rep
 .
 ├── data/                      # Input workbooks (see data/README.md)
 ├── notebook/                  # Jupyter walkthrough (exploratory + charts)
-├── outputs/                   # Placeholder for generated artifacts (see outputs/README.md; large files gitignored)
+├── outputs/                   # Sample run artifacts (CSV/XLSX/HTML/PNG); PDFs gitignored (see outputs/README.md)
 ├── scripts/                   # CLI entry points (batch run + exports)
 │   └── run_saccr.py
 ├── src/
@@ -73,6 +73,8 @@ Writes:
 - `summary.xlsx` (multi-sheet workbook)
 - `report.html` (tables; include chart if you pass `--plot`)
 - `rwa_by_counterparty.png` when using `--plot`
+
+A **sample run** of these files (except PDF) is committed under `outputs/` so others can view results without executing the pipeline.
 
 ### Install package (optional)
 

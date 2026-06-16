@@ -24,9 +24,6 @@ build/
 .env
 *.pem
 
-# Large or regenerated outputs (remove the # below if you want to track outputs/)
+# Generated outputs: keep PDFs out of Git (often large / personal exports).
+# CSV, HTML, PNG, XLSX in outputs/ are tracked as sample pipeline results.
 outputs/*.pdf
-outputs/*.csv
-outputs/*.png
-outputs/*.xlsx
-outputs/*.html
